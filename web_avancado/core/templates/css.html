@@ -1,46 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W3C</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-</head>
-<body>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">BSI - IFNMG</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">HOME <span class="sr-only">(página atual)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="w3c.html">W3C</a>
-            </li>
-            
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Desenvolvimento Web
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="html.html">HTML</a>
-                <a class="dropdown-item" href="#">CSS</a>
-                <a class="dropdown-item" href="javascript.html">Javascript</a>
-                <a class="dropdown-item" href="#">Frameworks Frontend</a>
-                <a class="dropdown-item" href="#">Frameworks Backend</a>
-              </div>
-            </li>
-            
-          </ul>
-          <button type="button" class="btn btn-outline-dark">Baixar</button>
-        </div>
-      </nav>
+{%extends 'base.html'%}{%block content%}
 
     <div class="jumbotron">
         <h1 class="display-4">CSS</h1>
@@ -60,9 +18,4 @@ O CSS também suporta conceitos como herança, onde os elementos filhos herdam a
 Em resumo, o CSS é uma linguagem de estilo utilizada para controlar a aparência e o layout de elementos em uma página web. Ele permite definir propriedades e valores para alterar cores, fontes, tamanhos, margens, alinhamentos e muitos outros aspectos visuais. A separação entre HTML e CSS permite uma melhor organização do código e facilita a manutenção e atualização dos estilos. Com o CSS, é possível criar páginas web visualmente atraentes e personalizadas.
         </p>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ></script>
-</body>
-</html>
+{%endblock%}

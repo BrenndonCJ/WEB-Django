@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name="index"),
-    path('/w3c', views.w3c, name="w3c"),
-    path('/html', views.html, name="html"),
+    path('w3c', views.w3c, name="w3c"),
+    path('html', views.html, name="html"),
+    path('css', views.css, name="css"),
 ]
