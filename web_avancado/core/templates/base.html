@@ -1,4 +1,5 @@
 {%load static%}
+{% comment %} {% load bootstrap4 %} {% endcomment %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 	<head>
@@ -6,6 +7,7 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+    {% comment %} {% bootstrap_css %} {% endcomment %}
 	</head>
 	<body>
 	       
@@ -35,6 +37,9 @@
         <a class="dropdown-item" href="#">Frameworks Frontend</a>
         <a class="dropdown-item" href="#">Frameworks Backend</a>
           </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{%url 'contato'%}">Contato</a>
         </li>
         
       </ul>
@@ -73,5 +78,6 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ></script>
+  {% comment %} {% bootstrap_javascript jquery='full' %} {% endcomment %}
 	</body>
 </html>    
