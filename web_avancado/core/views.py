@@ -15,6 +15,9 @@ def html(requests):
 def css(requests):
     return render(requests,"css.html")
 
+def javascript(requests):
+    return render(requests,"javascript.html")
+
 def contato(requests):
     form = ContatoForm(requests.POST or None)
     context = {'form':form}
@@ -25,4 +28,4 @@ def contato(requests):
         else:
             print("Email nao enviado")
         return redirect('index')
-    return render(requests,"FaleConosco.html", context)
+    return render(requests,"faleconosco.html", context)

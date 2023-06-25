@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Detalhes do aluno{% endblock %}
+
+{% block content %}
+<div class="container mt-3">
+  <h1>Formulário de Contato</h1>
+  <form action="{% url 'contato'%}" method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" class="form-control" id="nome" name="nome" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="telefone">Telefone:</label>
+      <input type="tel" class="form-control phone-mask" id="telefone" name="telefone" required>
+    </div>    
+    <div class="form-group">
+      <label for="mensagem">Mensagem:</label>
+      <textarea class="form-control" id="mensagem" name="mensagem" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>
+  <div class="container">
+    <a href="javascript:history.go(-1)" class="btn btn-secondary mt-3">Voltar</a>
+  </div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Detalhes do aluno{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>Lista de Matriculas</h1>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Nome do Aluno</th>
+          <th scope="col">Periodo</th>
+          <th scope="col">Disciplina</th>
+          <th scope="col">Nota</th>
+          <th scope="col">Situação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <td>{{aluno.nome}}</td>
+        <td>{{aluno.periodo}}</td>
+        <td>{{aluno.disciplina}}</td>
+        <td>{{aluno.nota}}</td>
+        <td>
+            {%if aluno.situacao == "A"%}
+            Aprovado
+            {%else%}
+            Reprovado
+            {%endif%}
+        </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="container">
+    <a href="javascript:history.go(-1)" class="btn btn-secondary mt-3">Voltar</a>
+  </div>
+{% endblock %}

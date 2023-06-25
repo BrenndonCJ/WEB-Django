@@ -7,5 +7,6 @@ urlpatterns = [
     path('w3c', views.w3c, name="w3c"),
     path('html', views.html, name="html"),
     path('css', views.css, name="css"),
+    path('js', views.javascript, name="javascript"),
     path('contato', views.contato, name="contato"),
 ]
