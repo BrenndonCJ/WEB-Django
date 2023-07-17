@@ -1,5 +1,0 @@
-django
-django-bootstrap4
-PyMySQL
-django-stdimage
-gunicorn
