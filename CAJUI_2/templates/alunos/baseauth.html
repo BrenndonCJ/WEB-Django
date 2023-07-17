@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gerenciamento de alunos</title>
+
+        <link rel="stylesheet" href="{%static '/css/alunos/stylebaseauth.css'%}">
+        <link rel="stylesheet" href="{%static '/css/alunos/stylelista.css'%}">
+
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+    </head>
+    <body>
+
+        <nav class="nav-top">
+            <div class="nav-content">
+                <div id="nav-links">
+                    <div>
+                        <h1>Gerenciar alunos</h1>
+                    </div>
+                    <div>
+                        <a href="{%url 'index'%}">Inicio</a>
+                        <a href="{%url 'index'%}">Listar Alunos</a>
+                    </div>                
+                </div>
+                <div id="nav-perfil">
+                    <a href="">Perfil</a>
+                </div>
+            </div>
+        </nav>
+
+        {%block content%}
+        {%endblock%}
+        
+        <script src="{%static 'js/scripts.js'%}"></script>
+    </body>
+</html>

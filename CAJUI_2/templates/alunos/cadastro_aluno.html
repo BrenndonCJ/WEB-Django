@@ -1,0 +1,52 @@
+{% extends 'alunos/baseauth.html' %}
+{%block content%}
+{% load static %}
+
+    <link rel="stylesheet" href="{%static '/css/alunos/stylecadastroaluno.css'%}">
+
+    <div class="header-page">
+        <div>
+            <h1>Cadastro de aluno</h1>
+        </div>
+        {% comment %} <div>
+            <a href="{%url 'index'%}">
+                <span class="material-icons">logout</span>
+            </a>
+        </div> {% endcomment %}
+    </div>
+
+    <div class="container">
+        <form action="{%url 'cadastroaluno'%}" method="POST">
+            {% csrf_token %}
+            <div class="column">
+                <label for="">Nome</label>
+                <input type="text" name="nome" id="">
+                <label for="">CPF</label>
+                <input type="text" name="cpf" id="">
+                <label for="">RG</label>
+                <input type="text" name="rg" id="">
+            </div>
+            <div class="column">
+                <label for="">Idade</label>
+                <input type="number" name="idade" id="">
+                <label for="">Data de nascimento</label>
+                <input type="date" name="datanascimento" id="">
+            </div>
+            <div class="column">
+                <label for="">Curso</label>
+                <input type="text" name="curso" id="">
+                <label for="">Ingresso na instituição</label>
+                <input type="date" name="ingressoinstituicao" id="">
+            </div>
+            <div class="column">
+                <label for="">Foto</label>
+                <input type="file" name="foto" id="">
+            </div>
+            <div class="column">
+                <div class="column-btn">
+                    <button type="submit">SALVAR</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

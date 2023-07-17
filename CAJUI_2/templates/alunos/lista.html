@@ -1,0 +1,71 @@
+{% extends 'alunos/baseauth.html' %}
+{%block content%}      
+    <body>
+        <div class="header-page">
+            <div>
+                <h1>Olá</h1>
+            </div>
+            <div>
+                <a href="{%url 'logout'%}">
+                    <span class="material-icons">logout</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="header">
+                <span>Lista de alunos</span>
+                <a href="{%url 'cadastroaluno'%}" id="new">Cadastrar</a>
+            </div>
+      
+            <div class="divTable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Idade</th>
+                            <th>Curso</th>
+                            <th>Ingresso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for aluno in alunos%}
+                        <tr>
+                            <td>
+                                <button onclick="openModal('{{aluno.imagem.thumb.url}}','{{aluno.nome}}','{{aluno.idade}}')" class="openmodal"><span>{{aluno.nome}}</span></button>
+                            </td>
+                            <td>
+                                <span>{{aluno.idade}}</span>
+                            </td>
+                            <td>
+                                <span>{{aluno.curso}}</span>
+                            </td>
+                            <td>
+                                <span>{{aluno.dataingresso}}</span>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        
+            <div id="modal_lista" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <img id="modal-foto" class="square-image">
+                        <div>
+                            <h2 id="modal-nome"></h2>
+                            <h2 id="modal-idade"></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    
+    </body>
+
+{%endblock%}

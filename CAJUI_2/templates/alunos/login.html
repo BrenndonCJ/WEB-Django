@@ -1,0 +1,74 @@
+{% extends 'alunos/base.html' %}
+{%load static%}
+{%block content%}
+    <div class="container">
+        
+        <main class="login">
+            <h1 class="my-text">LOGIN</h1>
+            <h2 class="my-text">Faça seu login</h2>
+
+            {% comment %} {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="alert-error">
+                        <ul class=flashes>
+                            {% for message in messages %}
+                               <li>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            {% endwith %} {% endcomment %}
+
+            <form id="form-login" action="{%url 'login'%}" method="POST">
+                {% csrf_token %}
+                <div>
+                    <span class="material-icons">person_outline</span>
+                    <input name="username" type="text" placeholder="Username" required>
+                </div>
+
+                <div>
+                    <span class="material-icons">lock</span>
+                    <input name="password" type="password" placeholder="Password" required>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+
+            <div class="register-sobre">
+                <button onclick="openModalCadastro()">
+                    Registrar
+                    <span class="material-icons">app_registration</span>
+                </button>
+                <button id="bt-sobre" onclick="openSobre()">Sobre</button>
+                <!-- <a href="{%url 'cadastro'%}">
+                    Registrar
+                    <span class="material-icons">app_registration</span>
+                </a> -->
+            </div>
+
+        </main>
+        
+        <img src="{%static 'imgs/background.png'%}" alt="" class="background">
+
+    </div>
+
+    <div id="modal_cadastro" class="modal">
+        <div class="modal-content">
+            <form action="{%url 'cadastro'%}" method="POST">
+                {% csrf_token %}
+                <div>
+                    <label for="">NOME</label>
+                    <input type="text" name="nome" required>
+                </div>
+                <div>
+                    <label for="">SENHA</label>
+                    <input type="password" name="senha" required>
+                </div>
+                <div>
+                    <button type="submit">CADASTRAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="{%static 'js/scriptlogin.js'%}"></script>
+{%endblock%}

@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #000000;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-text {
+    color: #ffffff;
+}
+
+.alert-error {
+    border-radius: 10px;
+    padding: 5px;
+    color: rgb(0, 255, 255);
+}
+
+.login {
+    width: 40%;
+    height: 100vh;
+    background-image: linear-gradient(to top right, #000000e2, #00ffff);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#form-login {
+    display: flex;
+    flex-direction: column;
+}
+
+#form-login div {
+    margin: 10px 0;
+    background-color: #0000009f;
+    border-radius: 10px;
+    width: 340px;
+    height: 56px;
+    
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    
+    color: #ffffff;
+}
+
+#form-login div > input {
+    background: transparent;
+    border-radius: 5px;
+    padding-left: 10px;
+    flex: 1;
+    border: none;
+    outline: none;
+    color: #ffffff;
+}
+#form-login div > input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #00000002 inset;
+    box-shadow: 0 0 0px 1000px #00000002 inset;
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: rgb(255, 255, 255) !important;
+}
+
+#form-login button {
+    background: #00ff80;
+    border-radius: 10px;
+    border: none;
+    margin: 10px 0;
+    width: 340px;
+    height: 56px;
+    font-size: large;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.container > img {
+    width: 60%;
+    height: 100vh;
+}
+
+.container a {
+    color: #ffffff;
+    text-decoration:none;
+}
+.container a:hover {
+    color: #2bff00;
+}
+
+.register-sobre {
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+}
+
+.register-sobre > button {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 17px;
+}
+
+.register-sobre > button:hover {
+    color: #2bff00;
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    width: 20vw;
+    height: 50vh;
+}
+
+.modal-content div {
+    padding: 10px;
+}
+
+.modal-content label {
+    display: flex;
+    align-items: start;
+}
+.modal-content input {
+    width: 200px;
+}
+
+.modal-content button {
+    background: #00ff80;
+    border-radius: 5px;
+    border: none;
+    font-size: medium;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+}
+
+.modal-content button:hover {
+    background: #1eff00;
+}
+
+/* FOOTER */
+.m-footer {
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    top: 90vh;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    z-index: 888;
+    align-items: center;
+    justify-content: center;
+}
+
+.m-footer div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.m-footer a {
+    font-size: 1rem;
+    width: 40px;
+    height: 40px;
+    padding: 0.5rem;
+    background: #00000088;
+    color: #f0f8ff;
+    margin: 0 5px;
+    border-radius: 50%;
+    transition: 0.3s;
+    text-decoration: none;
+    text-align: center;
+}
+
+.m-footer a:hover {
+    background: #000000fb;
+}
+
+@media (max-width: 1000px){
+    .container {
+        flex-direction: column;
+    }
+
+    .login {
+        width: 100vw;
+        height: 100vh;
+        background-image: linear-gradient(to top right, #0000001f, #8c00ffcc);
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #form-login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #form-login div {
+        width: 100%;
+        height: 15vmin;
+    }
+    
+    #form-login button {
+        width: 100%;
+        height: 10vmin;
+    }
+
+    .container > img {
+        display: none;
+    }
+
+    .m-footer a {
+        font-size: 1.2rem;
+        padding: 0.3rem;
+        background: #00ff80;
+        color: #000000;
+    }
+}

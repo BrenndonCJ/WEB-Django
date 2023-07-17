@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to top right, #000000e2, #00ffff);
+}
+
+.header-page {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    justify-content: space-between;
+  
+    width:90%;
+    height: 10%;
+    border-radius: 10px 10px 0 0;
+    background-color: #00f37a;
+    color: #ffffff;
+}
+.header-page > div > h1{
+    margin-left: 35vw;
+}
+.header-page > div > a{
+    color: #000000;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 90%;
+    height: 80%;
+    border-radius: 0 0 10px 10px;
+    background: #d8fffe;
+}
+
+.container form{
+    display: flex;
+    flex-direction: column;
+}
+
+.column {
+    padding: 20px;
+}
+.column label {
+    margin-left: 20px;
+    font-size: 18px;
+}
+.column input {
+    font-size: 18px;
+}
+
+.column-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.column-btn button {
+    background: #00ff80;
+    border-radius: 10px;
+    border: none;
+    margin: 10px 0;
+    width: 140px;
+    height: 56px;
+    font-size: large;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* responsividade */
+@media (max-width: 700px) {
+    body {
+      font-size: 10px;
+    }
+
+    .header-page > div > h1{
+        margin-left: 18vw;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        padding: 8px;
+    }
+
+    .column label {
+        font-size: 15px;
+        margin-left: 2px;
+        margin-top: 10px;
+    }
+    .column input {
+        font-size: 10px;
+    }
+
+    .column-btn button {
+        background: #00ff80;
+        border-radius: 5px;
+        border: none;
+        margin: 10px 0;
+        width: 70px;
+        height: 28px;
+        font-size: small;
+        cursor: pointer;
+    }
+}
